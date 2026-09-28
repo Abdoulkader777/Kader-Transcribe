@@ -129,7 +129,9 @@ const server = http.createServer((req, res) => {
         res.writeHead(500, {
           "Content-Type": "application/json"
         });
-        res.end(JSON.stringify({ error: "Erreur lors de l'envoi du fichier." }));
+        res.end(JSON.stringify({
+          error: "Erreur lors de l'envoi du fichier."
+        }));
         return;
       }
 
